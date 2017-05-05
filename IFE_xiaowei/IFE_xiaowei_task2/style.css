@@ -1,0 +1,203 @@
+/*----- 基本样式 -----*/
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #DEDEDE;
+	font-family: Microsoft YaHei;
+}
+img{
+	width: 300px;
+}
+
+/*----- 一层div -----*/
+.wrap-header,.wrap-footer{
+	color: #FFFFFF;
+	background-color: #000000;
+}
+.wrap-header{
+	height: 60px;
+}
+.wrap-footer{
+	height: 72px;
+}
+
+/*----- 二层div -----*/
+.header,.main,.footer,.aside{
+	width: 1284px;
+	margin: 0 auto;
+}
+
+/*----- 三层div -----*/
+.header-list{
+	margin:0 22px;
+}
+.main-list{
+	background-color: #FFFFFF;
+	margin: 22px;
+	padding: 22px;
+	border: 1px solid #CDCDCD;
+}
+.aside-list{
+	width: 1178px;
+	background-color: #FFFFFF;
+	border: 1px solid #CDCDCD;
+	margin: 22px;
+	padding: 10px 20px;
+	font-size: 10px;
+}
+.footer-list{
+	text-align: center;  /* 文本水平居中 */
+	padding: 22px 0;
+	font-size: 12px;
+}
+
+/*----- header右侧ul -----*/
+.div-task{
+	float: right;
+}
+.task{
+	float: left;
+	margin: 0 15px;
+	font-size: 13px;
+}
+/* 当class定义在<a>中时，要a.class：link{} */
+/* Google chrome中要用a：-webkit-any-link{} */
+a.task:-webkit-any-link{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/*----- 文章 -----*/
+h2{
+	font-size: 20px;
+}
+h3{
+	font-size: 15px;	
+	color: #68686A;
+}
+.teach{
+	font-size: 10px;	
+	color: #68686A;
+}
+.p1{
+	text-indent: 2em;  /* 首行缩进，em：字符 */
+}
+/* 当class定义在<a>的父元素中时，要.class a：link{} */
+/* Google chrome中要用a：-webkit-any-link{} */
+.main-list a:-webkit-any-link{
+	color: blue;
+}
+
+/*----- 图片列表 -----*/
+.ul-img img{
+	height: 80px;
+	width: 100px;
+	margin: 5px auto;
+}
+.ul-img li{
+	width: 120px;
+	height: 126px;
+	margin: 18px 0;
+	border: 1px solid #CDCDCD;
+	text-align: center;
+	line-height: 30px;  /* 设置行高：文本垂直居中的方法之一 */
+	font-size: 10px;
+}
+
+/*----- table表格 -----*/
+.tb{
+	border-collapse: collapse;  /* 合并table边框 */
+	width: 1195px;
+	text-align: left;
+	text-indent: 5px;
+	font-size: 10px;
+}
+.tb-th{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.tb-tf{
+	background-color: #CCCCCC;
+	font-weight: bold;
+}
+.tb td,th{
+	height: 25px;
+}
+
+/*----- 侧边栏aside -----*/
+.aside h2{
+	height: 40px;
+	border: 2px solid #CDCDCD;
+	font-size: 15px;
+	float: left;
+}
+.aside h3{
+	height: 40px;
+	color: #000000;
+	margin: 22px 15px;
+	/*border: 1px solid red;*/
+}
+.aside label{
+	width: 355px;
+	height: 20px;
+	line-height: 20px;
+	/*border: 1px solid red;*/
+	text-align: right;
+	padding: 0px 0 0 0;
+	display: block;  /* 将行内元素转换为块元素 */
+	float: left;
+}
+.input-text{
+	width: 130px;
+	height: 18px;
+	float: left;
+	padding: 0;
+	font-size: 10px;
+	font-family: Microsoft YaHei;
+}
+.span-text{
+	display: block;
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	color: #AFB4B8;
+	float: left;
+	/*border: 1px solid red;*/
+	margin: 0px 7px;
+}
+.span-check {
+    float: left;
+    height: 15px;
+    margin: 7px 0 0 0;
+}
+.input-check{
+	float: left;
+    height: 20px;
+    width: 15px;
+    margin: 7px 0 0 7px;
+}
+/* 清除浮动 */
+.clear{
+	clear: both;
+}
+textarea{
+	width: 766px;
+	height: 100px;
+	font-size: 15px;
+}
+form > *{  /* >:子标签 *：所以标签，通配符选择器 */
+	margin: 5px 7px;
+	text-indent: 2px;
+	/*float: left;*/
+}
+.submit{
+	width: 1180px;
+	height: 40px;
+	background-color: #3355D0;
+	border-radius: 7px;   /* CSS3边框圆角，传入圆角的半径 */
+	border: 0px;
+	font-size: 16px;
+	color: #ffffff;
+	font-family: Microsoft YaHei;
+	margin: 0 auto;
+}
