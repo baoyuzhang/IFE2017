@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>任务八：响应式网格（栅格化）布局</title>
+	<!-- <link rel="stylesheet" type="text/css" href="IFE_xiaowei_task8.css"> -->
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		[class*='col-']{
+			float: left;
+		}
+		.inner{
+			border: 1px solid #999;
+			background-color: #eee;
+			height: 50px;
+			margin: 10px;
+			line-height: 50px;
+			text-align: center;
+		}
+		@media screen and (min-width:768px){
+			.col-md-1{
+				width: 8.3333333333333333333333333333333%;
+			}
+			.col-md-2{
+				width: 16.666666666666666666666666666667%;
+			}
+			.col-md-3{
+				width: 25%;
+			}
+			.col-md-4{
+				width: 33.333333333333333333333333333333%;
+			}
+			.col-md-5{
+				width: 41.666666666666666666666666666667%;
+			}
+			.col-md-6{
+				width: 50%;
+			}
+			.col-md-7{
+				width: 58.333333333333333333333333333333%;
+			}
+			.col-md-8{
+				width: 66.666666666666666666666666666667%;
+			}
+			.col-md-9{
+				width: 75%;
+			}
+			.col-md-10{
+				width: 83.333333333333333333333333333333%;
+			}
+			.col-md-11{
+				width: 91.666666666666666666666666666667%;
+			}
+			.col-md-12{
+				width: 100%;
+			}
+		}
+		@media all and (max-width:768px){
+			.col-sm-1{
+				width: 8.3333333333333333333333333333333%;
+			}
+			.col-sm-2{
+				width: 16.666666666666666666666666666667%;
+			}
+			.col-sm-3{
+				width: 25%;
+			}
+			.col-sm-4{
+				width: 33.333333333333333333333333333333%;
+			}
+			.col-sm-5{
+				width: 41.666666666666666666666666666667%;
+			}
+			.col-sm-6{
+				width: 50%;
+			}
+			.col-sm-7{
+				width: 58.333333333333333333333333333333%;
+			}
+			.col-sm-8{
+				width: 66.666666666666666666666666666667%;
+			}
+			.col-sm-9{
+				width: 75%;
+			}
+			.col-sm-10{
+				width: 83.333333333333333333333333333333%;
+			}
+			.col-sm-11{
+				width: 91.666666666666666666666666666667%;
+			}
+			.col-sm-12{
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="col-md-4 col-sm-6"><div class="inner">4 --> 6</div></div>
+	<div class="col-md-4 col-sm-6"><div class="inner">4 --> 6</div></div>
+	<div class="col-md-4 col-sm-12"><div class="inner">4 --> 12</div></div>
+	<div class="col-md-3 col-sm-3"><div class="inner">3 --> 3</div></div>
+	<div class="col-md-6 col-sm-6"><div class="inner">6 --> 6</div></div>
+	<div class="col-md-3 col-sm-3"><div class="inner">3 --> 3</div></div>
+	<div class="col-md-1 col-sm-2"><div class="inner">1 --> 2</div></div>
+	<div class="col-md-1 col-sm-2"><div class="inner">1 --> 2</div></div>
+	<div class="col-md-2 col-sm-8"><div class="inner">2 --> 8</div></div>
+	<div class="col-md-2 col-sm-3"><div class="inner">2 --> 3</div></div>
+	<div class="col-md-6 col-sm-3"><div class="inner">6 --> 3</div></div>
+</body>
+</html>
