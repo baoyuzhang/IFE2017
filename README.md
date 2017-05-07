@@ -21,3 +21,6 @@
 
 任务七：实现常见的技术产品官网的页面架构及样式布局
 [【任务和代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task7)  [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task7/IFE_xiaowei_task7.html)
+
+任务八：响应式网格（栅格化）布局
+[【任务和代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task8)  [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task8/IFE_xiaowei_task8.html)
