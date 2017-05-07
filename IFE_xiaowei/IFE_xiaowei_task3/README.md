@@ -17,3 +17,10 @@ http://ife.baidu.com/course/detail/id/94
 - 调节浏览器宽度，固定宽度和自适应宽度的效果始终符合预期。
 - 改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。
 - 其他效果图中给出的标识均被正确地实现。
+
+### 参考资料
+- [MDN：position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)：了解 CSS position 属性的基本知识
+- [MDN：float](https://developer.mozilla.org/en-US/docs/Web/CSS/float?v=example)：了解 CSS float 属性的基本知识
+- [Learn CSS Positioning in Ten Steps](http://www.barelyfitz.com/screencast/html-training/css/positioning/)：通过具体的例子熟悉 position 属性
+- [清除浮动（clearfix hack）](http://zh.learnlayout.com/clearfix.html)：清除浮动是什么，如何简单地清除浮动
+- [StackOverflow：Which method of ‘clearfix’ is best?](http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use)：清除浮动黑科技完整解读
