@@ -1,5 +1,6 @@
 ## 任务八：响应式网格（栅格化）布局
-http://ife.baidu.com/course/detail/id/104
+[【任务地址】](http://ife.baidu.com/course/detail/id/104) [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task8/IFE_xiaowei_task8.html)
+
 
 ### 任务目的
 - 使用 HTML 与 CSS 实现类似 BootStrap 的响应式 12 栏网格布局，根据屏幕宽度，元素占的栏数不同。

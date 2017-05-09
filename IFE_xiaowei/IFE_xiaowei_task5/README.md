@@ -1,5 +1,5 @@
 ## 任务五：零基础HTML及CSS编码（二）
-http://ife.baidu.com/course/detail/id/96
+[【任务地址】](http://ife.baidu.com/course/detail/id/96) [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task5/IFE_xiaowei_task5.html)
 
 ### 任务目的
 1. 针对设计稿样式进行合理的HTML架构，包括以下但不限于：

@@ -1,5 +1,5 @@
 ## 任务六：通过HTML及CSS模拟报纸排版
-http://ife.baidu.com/course/detail/id/99
+[【任务地址】](http://ife.baidu.com/course/detail/id/99) [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task6/IFE_xiaowei_task6.html)
 
 ### 任务目的
 1. 深入掌握CSS中的字体、背景、颜色等属性的设置

@@ -1,5 +1,5 @@
 ## 任务四：定位和居中问题
-http://ife.baidu.com/course/detail/id/95
+[【任务地址】](http://ife.baidu.com/course/detail/id/95) [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task4/IFE_xiaowei_task4.html)
 
 ### 任务目标
 1. 实践HTML/CSS布局方式

@@ -31,13 +31,13 @@
   `<div class="pro-table-1">`：没有checked时`display: none;`,checked时`display: block;`
 
   ```
-<li>
-				<input type="radio" name="pro-material" id="pro-1" checked>
-				<label for="pro-1">项目一</label>
-				<div class="pro-table-1">
-					<table>...</table>
-				</div>
-			</li>
+  <li>
+	    <input type="radio" name="pro-material" id="pro-1" checked>
+	    <label for="pro-1">项目一</label>
+	    <div class="pro-table-1">
+	    	<table>...</table>
+	    </div>
+ </li>
 ```
 
 2. 边框重叠部分不显示的效果实现方法：
@@ -65,12 +65,15 @@
 3. `<li>`和`<label>`都要`float:left;`
 
   若`<li>`和`<label>`都没有`float:left;`，将出现以下错误：
+
   ![`<li>`和`<label>`都没有`float:left;`](img_error/2017-05-09_163941.png)
 
   若`<li>`没有`float:left;`，将出现以下错误：
+
   ![`<li>`没有`float:left;`](img_error/2017-05-09_163256.png)
 
   若`<label>`没有`float:left;`，将出现以下错误：
+
   ![`<label>`没有`float:left;`](img_error/2017-05-09_163832.png)
 
 4. `<div class="pro-table-1">`要使用绝对定位，否则，将出现以下错误：
