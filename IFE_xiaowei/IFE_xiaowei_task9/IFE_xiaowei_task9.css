@@ -34,6 +34,9 @@ input{
 a{
 	text-decoration: none;
 }
+a:visited,a:link{
+	color: #000000;
+}
 li{
 	list-style: none;
 }
@@ -659,7 +662,6 @@ nav div[class='selected']>a,nav li[class='selected']>a{
 	display: inline-block;
 	margin: 0;
 	background-color: #FFFFFF;
-	color: #000000;
 }
 .select-date a:hover{
 	color: #FFFFFF;
