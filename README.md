@@ -24,3 +24,6 @@
 
 任务八：响应式网格（栅格化）布局
 [【任务和代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task8)  [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task8/IFE_xiaowei_task8.html)
+
+任务九：使用HTML/CSS实现一个复杂页面
+[【任务和代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task9)  [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task9/IFE_xiaowei_task9.html)

@@ -1,0 +1,771 @@
+/* =General
+-----------------------------------------------------------------------------*/
+
+
+/* Remove padding and margin */
+* {
+  margin: 0;
+	padding: 0;
+}
+
+/* Put it back on certain elements */
+h1, h2, h3, h4, h5, h6, p, span,pre, blockquote, form, fieldset, table, ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Class for clearing floats */
+.clear {
+	clear: both;
+}
+
+
+/* Remove border around linked images */
+img {
+	border: 0;
+}
+input{
+	border: none;
+	outline: none;
+	appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+select{
+	appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-left: 6px;
+	font-size: 12px;
+	font-family: "SimHei";
+}
+
+/* =Typography
+-----------------------------------------------------------------------------*/
+
+body {
+	font-size: 12px;
+	font-family: "SimHei";
+}
+
+.inner{
+	width: 1280px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.wrap-main>div{
+	background-color: #2A2E3D;
+}
+
+/* =Forms
+-----------------------------------------------------------------------------*/
+
+/* Removes fieldset borders. even on Opea 7 */
+fieldset {
+  border: 1px solid transparent;
+}
+
+
+/* =Tables
+-----------------------------------------------------------------------------*/
+
+table { 
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: left;
+  font-weight: normal;
+}
+
+
+
+/* =Headings
+-----------------------------------------------------------------------------*/
+.wrap-header{
+	width: 100%;
+	height: 56px;
+	background-color: #2189BF;
+}
+.find{
+	width: 312px;
+	height: 28px;
+	border-radius: 14px;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 50%;
+	margin-top: -14px;
+	right: 160px;
+}
+.find i{
+	margin-left: 14px;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	float: left;
+	background: url(images/task_9_0000s_0000s_0000__编组_.png) no-repeat left center;
+}
+.find input{
+	width: 250px;
+	line-height: 28px;
+	float: left;
+}
+.login{
+	height: 100%;
+	line-height: 56px;
+	position: absolute;
+	right: 40px;
+	background: url(images/task_9_0000s_0000s_0003__编组_.png) no-repeat left center;	
+	font-family: "Adobe Heiti Std";
+	color: #FFFFFF;
+	text-indent: 20px;
+}
+
+
+/* =Branding
+-----------------------------------------------------------------------------*/
+.branding{
+	margin: 10px;
+	position: absolute;
+	left: 40px;
+}
+
+
+/* =Main Nav
+-----------------------------------------------------------------------------*/
+.nav{
+	width: 260px;
+	background-color: #2A2E3D;
+	float: left;
+	position: relative;
+	color: #6E8096;
+}
+/*--用户信息--*/
+.user{
+	padding-left: 45px;
+	font-size: 16px;
+	color: #F6F5F5;
+	float: left;
+}
+.user img{
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	padding: 4px;
+	border: 1px solid #BABABE;
+	margin: 18px 18px 0 0;
+	float: left;
+}
+.user span{
+	float: left;
+	line-height: 89px;
+}
+.user-count{
+	color: #67778B;
+	font-family: "SimSun";
+	margin-left: 32px;
+	float: left;
+}
+.user-count div{
+	float: left;
+	margin: 22px 0;
+	padding: 0 32px;
+}
+.collection{
+	border-right: 1px solid #6D7F95;
+}
+/*--导航栏--*/
+nav a{
+	display: block;
+	color: #6E8096;
+}
+nav>div{
+	padding: 18px 0;
+
+}
+nav>div>a{
+	text-indent: 25px;
+	margin-left: 46px;
+}
+nav li{
+	position: relative;
+	margin-top: 18px;
+}
+.personal-statement{
+	background: url(images/task_9_0000s_0001s_0008__编组_.png) no-repeat left center;
+}
+.personal-collection,.gallery,.growth-record{
+	background: url(images/task_9_0000s_0001s_0003__编组_.png) no-repeat left center;
+}
+.myshare{
+	background: url(images/task_9_0000s_0001s_0006__编组_.png) no-repeat left center;
+}
+.account-info{
+	background: url(images/task_9_0000s_0001s_0005.png) no-repeat left center;
+}
+/*子目录*/
+.first-level{
+	margin-left: 60px;
+}
+.second-level{
+	margin-left: 15px;
+}
+.first-level i{
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(images/task_9_0000s_0001s_0015.png) no-repeat 0 0;	
+}
+.first-level>li>a{
+	text-indent: 18px;
+	margin-left: 15px;
+	background: url(images/task_9_0000s_0001s_0010__编组_.png) no-repeat left center;	
+}
+.second-level>li>a{
+	text-indent: 18px;
+	margin-left: 15px;
+	background: url(images/task_9_0000s_0001s_0000.png) no-repeat left center;	
+}
+/*selected样式*/
+nav div[class='selected']{
+	background-color: #383D4E;
+}
+nav div[class='selected']>a,nav li[class='selected']>a{
+	color: #EDEDF0;
+}
+.first-level>li[class='selected']>i{
+	background: url(images/task_9_0000s_0001s_0015.png) no-repeat 0 -28px;
+}
+.first-level>li[class='selected']>a{
+	background: url(images/task_9_0000s_0001s_0014.png) no-repeat left center;
+}
+.second-level>li[class='selected']>a{
+	background: url(images/task_9_0000s_0001s_0009.png) no-repeat left center;
+}
+
+
+/* =Main Content
+-----------------------------------------------------------------------------*/
+.wrap-main{
+	background-color: #282828;
+}
+.content{
+	width: 1020px;
+	float: right;
+	background-color: #EEEEEE;
+	padding-bottom: 148px;
+}
+.head{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 30px;
+	background-color: #FFFFFF;
+	color: #B0B0B0;
+}
+.main{
+	width: 890px;
+	margin: 18px auto;
+}
+/* =section-one
+-----------------------------------------------------------------------------*/
+.one{
+	width: 100%;
+	height: 86px;
+	border: 1px solid #E4E5E8;
+	background-color: #FFFFFF;
+	color: #ABABAB;
+	position: relative;
+	margin-bottom: 8px;
+}
+.one>form>div{
+	display: inline-block;
+	margin: 15px 38px 0 0;
+	position: relative;
+	float: left;
+}
+.one select{
+	height: 25px;
+	margin: 0 0 5px 9px;
+	border: 1px solid #CBCBCB;
+	background: url(images/_路径_.png) no-repeat;
+}
+.item{
+	padding-left: 28px;
+}
+.item select{
+	width: 70px;
+	background-position: 54px center;
+}
+.sale{
+	width: 190px;
+	display: block;
+	background: url(images/_路径_ + _路径_ + _路径_ + _路径_ + _路径_ + _路径_.png) no-repeat right center;
+}
+.sale select{
+	width: 120px;
+	background-position: 104px center;
+}
+.sale span{
+	display: block;
+	height: 100%;
+	line-height: 60px;
+	text-align: right;
+	color: #FFFFFF;
+	position: absolute;
+	right: 1px;
+	top: 0;
+}
+.detail>div{
+	float: left;
+	margin-right: 16px;
+}
+.date input{
+	width: 118px;
+	height: 25px;
+	margin: 0 0 5px 9px;
+	border: 1px solid #CBCBCB;
+	text-indent: 6px;
+}
+.deal-item select{
+	width: 120px;
+}
+.date input,.deal-item select{
+	background-position: 104px center;
+}
+.tic-toc select,.people-num select{
+	width: 70px;
+	background-position: 54px center;
+}
+.one-submit{
+	width: 50px;
+	height: 25px;
+	color: #FFFFFF;
+	background-color: #388AC1;
+	position: absolute;
+	right: 100px;
+	top: 30px;
+}
+/* =section-two
+-----------------------------------------------------------------------------*/
+.two{
+	height: 65px;
+	margin-bottom: 22px;
+}
+.two>i,.two>div{
+	height: 100%;
+	border: 1px solid #CACDD0;
+	float: left;
+	background-color: #FFFFFF;
+}
+.two i{
+	display: block;
+	width: 28px;
+	margin-right: 5px;
+}
+.left{
+	background: url(images/left.png) no-repeat center center;
+}
+.right{
+	background: url(images/right.png) no-repeat center center;
+}
+.record{
+	width: 108px;
+	margin-right: 5px;
+	font-family: "Microsoft YaHei";
+}
+.record-time{
+	color: #323333;
+	text-align: center;
+	margin: 8px 0;
+}
+.record-money{
+	font-size: 21px;
+	color: #EC6500;
+	text-align: center;
+}
+.record-money span{
+	font-size: 14px;
+	color: #AAAAAA;
+}
+.record:hover{
+	height: 64px;
+	border-top: 2px solid #4388C8;
+}
+.history-search{
+	width: 128px;
+	background: url(images/historysearch.png) no-repeat 20px center;
+}
+.history-search>span{
+	display: block;
+	line-height: 65px;
+	font-family: "Microsoft YaHei";
+	margin-left: 20px;
+	text-indent: 40px;
+}
+
+/* =section-three
+-----------------------------------------------------------------------------*/
+.three{
+	font-family: "Microsoft YaHei";
+	color: #323333;
+	margin-bottom: 12px;
+	float: left;
+}
+.three span{
+	display: block;
+	margin-bottom: 5px;
+}
+[class*='statistics-']{
+	width: 197px;
+	height: 70px;
+	background-color: #FFFFFF;
+	border: 1px solid #CACDD0;
+	float: left;
+}
+[class*='statistics-']>div{
+	line-height: 23px;
+	margin: 11px 15px 11px 8px;
+}
+[class*='statistics-'] span{
+	color: #B7B7B7;
+}
+.color-block{
+	width: 60px;
+	height: 46px;
+	float: right;
+}
+.statistics-1{
+	border-left: 3px solid #43B29E;
+	margin-right: 28px;
+}
+.statistics-1 .color-block{
+	background-color: #43B29E;
+}
+.statistics-2{
+	border-left: 3px solid #388AC1;
+	margin-right: 28px;
+}
+.statistics-2 .color-block{
+	background-color: #388AC1;
+}
+.statistics-3{
+	border-left: 3px solid #D04B36;
+	margin-right: 28px;
+}
+.statistics-3 .color-block{
+	background-color: #D04B36;
+}
+.statistics-4{
+	border-left: 3px solid #E2CD47;
+	margin: none;
+}
+.statistics-4 .color-block{
+	background-color: #E2CD47;
+}
+
+/* =section-four
+-----------------------------------------------------------------------------*/
+.four{
+	height: 355px;
+}
+.four>div{
+	height: 100%;
+	border: 1px solid #CACDD0;
+	background-color: #FFFFFF;
+	float: left;
+	border-radius: 5px;
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+.title{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #F4F5F7;
+	color: #B5B5B5;
+	text-indent: 20px;
+}
+
+
+/*第一块*/
+.project-table{
+	width: 528px;
+	margin-right: 8px;
+	color: #535353;
+}
+.project-table ul{
+	margin: 12px 0 0 20px;
+	position: relative;
+}
+.project-table li{
+	float: left;
+}
+.project-table input{
+	/*display: none;*/
+	appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.project-table label{
+	width: 80px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	border: 1px solid #CBCCCC;
+	border-radius: 3px 3px 0 0;
+	margin-right: 5px;
+	float: left;
+	background-color: #EDEDF0;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+[class*='pro-table-']{
+	width: 488px;
+	height: 248px;
+	border: 1px solid #CBCCCC;
+	margin-top: -1px;
+	border-radius: 0 3px 3px 3px;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 28px;
+	left: 0;
+	z-index: 0;
+	display: none;
+}
+[class*='pro-table-'] table{
+	width: 400px;
+	line-height: 28px;
+	margin: 27px auto 0;
+	border: 1px solid #CBCCCC;
+}
+[class*='pro-table-'] td{
+	border: 1px solid #CBCCCC;
+	text-align: center;
+}
+[id*='pro-']:checked~[class*='pro-table-']{
+	display: block;
+}
+[id*='pro-']:checked~label{
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+
+/*第二块*/
+.project-content{
+	width: 348px;
+	position: relative;
+}
+.project-content form{
+	width: 280px;
+	margin: 16px auto;
+	font-family: "Microsoft YaHei";
+	color: #CCCBCB;
+}
+.project-content form>div{
+	border-bottom: 1px solid #E7E7E7;
+	float: left;
+	height: 44px;
+	line-height: 22px;
+	text-indent: 15px;
+}
+.project-content form>div:nth-of-type(1){
+	width: 280px;
+}
+.project-content form>div:nth-of-type(2){
+	width: 95px;
+}
+.project-content form>div:nth-of-type(3){
+	width: 185px;
+}
+.project-content form>div:nth-of-type(4){
+	width: 280px;
+	height: 146px;
+}
+.project-content span{
+	display: block;
+}
+.project-content form>div>input{
+	text-indent: 15px;
+	color: #727272;
+}
+
+#discription,.project-content i{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	color: #CCCBCB;
+	background-color: #D5D6D5;	
+	margin-top: 10px;
+	position: absolute;
+	left: 40px;
+	bottom: 34px;
+}
+.project-content label{
+	position: absolute;
+	left: 60px;
+	bottom: 34px;
+}
+#discription:checked{
+	background: url(images/task_9_0000s_0004s_001.png) no-repeat center center;
+}
+.project-content-submit{
+	width: 52px;
+	height: 25px;
+	color: #FFFFFF;
+	background-color: #388BC2;
+	float: right;
+	margin-top: 6px;
+	border-radius: 2px;
+}
+
+
+/*第三块*/
+.project-calendar{
+	width: 348px;
+	margin-right: 8px;
+	position: relative;
+}
+.select-date{
+	margin: 10px 22px;
+	padding-left: 2px;
+}
+.select-date select{
+	width: 70px;
+	border: 1px solid #CBCBCB;
+	height: 25px;
+	background: url(images/task_9_0000s_0003s_0002.png) no-repeat 55px center;	
+}
+.select-date a{
+	width: 68px;
+	height: 23px;
+	line-height: 23px;
+	border: 1px solid #CBCBCB;
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	background-color: #FFFFFF;
+}
+.select-date a:hover{
+	color: #FFFFFF;
+	background-color: #CE4147;
+}
+.project-calendar table{
+	width: 310px;
+	margin: 0 auto;
+}
+.project-calendar td{
+	text-align: center;
+}
+.project-calendar thead{
+	border-top: 1px solid #A9CFEC;
+	border-bottom: 1px solid #E1E1E2;
+	height: 28px;
+	line-height: 28px;
+}
+.project-calendar tbody td{
+	width: 44px;
+	height: 44px;
+}
+.project-calendar tbody td>div{
+	width: 38px;
+	height: 33px;
+	padding-top: 5px;
+	margin: 2px auto;
+	border: 1px solid #FFFFFF;
+}
+.project-calendar td[class='festival'] .yin,
+.project-calendar tbody>tr>td:nth-of-type(6) .yang,
+.project-calendar tbody>tr>td:nth-of-type(7) .yang{
+	color: #CD3539;
+}
+.project-calendar div[class='selected']{
+	border: 1px solid #F5C52A;
+}
+.project-calendar tbody td>div:hover{
+	background-color: #F4F5F7;
+	cursor: pointer;
+}
+.project-calendar span{
+	display: block;
+}
+
+
+
+/*第四块*/
+.project-brand-order{
+	width: 528px;
+	position: relative;
+}
+.brand-order{
+	width: 450px;
+	height: 275px;
+	overflow: hidden;
+	margin: 18px auto;
+}
+.brand-order td{
+	border: 1px solid #D6D7D8;
+	height: 24px;
+}
+.brand-order tr>td:nth-of-type(1),
+.brand-order thead>td:nth-of-type(1){
+	width: 66px;
+	text-align: center;	
+}
+.brand-order tr>td:nth-of-type(2),
+.brand-order thead>td:nth-of-type(2){
+	width: 90px;
+	text-align: center;	
+}
+.brand-order tr>td:nth-of-type(3),
+.brand-order thead>td:nth-of-type(3){
+	width: 290px;
+	text-align: left;	
+	text-indent: 32px;
+}
+.brand-order td>div{
+	display: inline-block;
+	width: 170px;
+	height: 4px;
+	background-color: #DCDCDC;
+	margin: 0 0 2px 11px;
+}
+.brand-order tr>td>div>div{
+	width: 90px;
+	height: 4px;
+	background-color: #7ECAF0;
+}
+.brand-order tr:nth-of-type(1)>td>div>div{
+	width: 140px;
+	height: 4px;
+	background-color: #ED6E52;
+}
+.brand-order tr:nth-of-type(2)>td>div>div{
+	width: 130px;
+	height: 4px;
+	background-color: #EF804F;
+}
+.brand-order tr:nth-of-type(3)>td>div>div{
+	width: 120px;
+	height: 4px;
+	background-color: #F19E4F;
+}
+.brand-order tbody>tr:hover{
+	background-color: #F4F5F6;	
+	cursor: pointer;
+}
+
