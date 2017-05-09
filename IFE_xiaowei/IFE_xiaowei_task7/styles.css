@@ -164,6 +164,7 @@ ul{
 	position: relative;
 	width: 100%;
 	height: 340px;
+	overflow: visible !important;
 	/*background: url(images/task_1_7_0000s_0004s_0023_看地图.png) no-repeat top center;*/
 }
 .main4-title{
@@ -227,6 +228,7 @@ ul{
 	margin: 0 15px;
 	padding-bottom: 15px;
 	z-index: 120;
+	position: relative;/*必须有！否则超出main4的li选项将无法选中*/
 }
 .location span,li{
 	line-height: 36px;
@@ -280,6 +282,7 @@ ul{
 	height: 100%;
 	border: 2px solid #D79995;
 	border-radius: 2px;
+	overflow: visible;
 }
 
 /*--main5--*/
