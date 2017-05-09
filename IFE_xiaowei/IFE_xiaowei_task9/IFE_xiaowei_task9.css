@@ -659,6 +659,7 @@ nav div[class='selected']>a,nav li[class='selected']>a{
 	display: inline-block;
 	margin: 0;
 	background-color: #FFFFFF;
+	color: #000000;
 }
 .select-date a:hover{
 	color: #FFFFFF;
