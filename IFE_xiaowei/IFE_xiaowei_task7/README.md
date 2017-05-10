@@ -1,5 +1,8 @@
 ## 任务七：实现常见的技术产品官网的页面架构及样式布局
-[【任务地址】](http://ife.baidu.com/course/detail/id/102) [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task7/IFE_xiaowei_task7.html)
+【平均用时 2.6 天】
+[【百度地址】](http://ife.baidu.com/course/detail/id/102)
+[【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task7)  
+[【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task7/IFE_xiaowei_task7.html)
 
 ### 任务目的
 1. 通过实现一个常见的技术产品官网，加深对于HTML，CSS的实战能力

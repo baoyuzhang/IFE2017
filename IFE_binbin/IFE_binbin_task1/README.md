@@ -1,6 +1,8 @@
 ## 任务一：零基础JavaScript编码（一）
 【平均用时 2.7 天】
-[【任务地址】](http://ife.baidu.com/course/detail/id/93) [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_binbin/IFE_binbin_task1/IFE_xiaowei_task1.html)
+[【百度地址】](http://ife.baidu.com/course/detail/id/93)
+[【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_binbin/IFE_binbin_task1)  
+[【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_binbin/IFE_binbin_task1/IFE_binbin_task1.html)
 
 ### 任务目的
 - JavaScript初体验

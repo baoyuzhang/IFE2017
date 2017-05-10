@@ -1,5 +1,8 @@
 # 任务九：使用HTML/CSS实现一个复杂页面
-[【任务地址】](http://ife.baidu.com/course/detail/id/113) [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task9/IFE_xiaowei_task9.html)
+【平均用时 2.4 天】
+[【百度地址】](http://ife.baidu.com/course/detail/id/113)
+[【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task9)  
+[【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task9/IFE_xiaowei_task9.html)
 
 ## 任务目的
 - 通过实现一个较为复杂的页面，加深对于HTML，CSS的实战能力
