@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>IFE binbin task1</title>
+	<title>IFE binbin task2</title>
 </head>
 <body>
 
@@ -12,7 +12,7 @@
     	<li>第一名：福州（样例），10</li>
     	<li>第二名：福州（样例），10</li> -->
 	</ul>
-	<button id="button"></button>
+	<button id="button-order">点我生成【空气重度污染城市列表】</button>
 
 <script type="text/javascript">
 
@@ -35,12 +35,56 @@ var aqiData = [
 
 	/*-------------------------我的代码---------------------------*/
 
-	var button = document.getElementById('button');
-	// var aqi_input = document.getElementById('aqi-input');
-	// var aqi_display = document.getElementById('aqi-display');
-	// button.onclick = function(event){
-	// 	aqi_display.firstChild.nodeValue = aqi_input.value;
-	// }
+	// 显示未排序列表
+	var aqi_list_ul = document.getElementById("aqi-list-ul");
+	window.onload= aqiData.forEach(function(item,index,array){
+		var city = item.slice(0,1);
+		var city_num = item.slice(1,2);
+		var aqi_list_li = document.createElement("li");
+		var aqi_list_li_text = document.createTextNode((index+1)+"."+city+","+city_num);
+		aqi_list_li.appendChild(aqi_list_li_text);
+		aqi_list_ul.appendChild(aqi_list_li);
+	});
+
+
+	// 显示排序列表
+	var button_order = document.getElementById('button-order');
+	button_order.onclick = function(event){
+		// 添加标题
+		var title = document.createElement("h3");
+		var title_text = document.createTextNode("污染城市列表（已排序）");
+		title.appendChild(title_text);
+		insertAfter(title,button_order);
+		// 二维数组排序
+		aqiData.sort(function(x,y){
+			return y[1]-x[1];
+		});
+		// 筛选出空气质量指数大于60的城市
+		aqiData = aqiData.filter(function(item,index,array){
+			return (item[1]>60);
+		});
+		// 创建排序列表
+		var aqi_order_ul = document.createElement("ul");
+		aqiData.forEach(function(item,index,array){
+			var order_city = item.slice(0,1);
+			var order_city_num = item.slice(1,2);
+			var aqi_order_li = document.createElement("li");
+			var aqi_order_li_text = document.createTextNode((index+1)+"."+order_city+","+order_city_num);
+			aqi_order_li.appendChild(aqi_order_li_text);
+			aqi_order_ul.appendChild(aqi_order_li);
+			insertAfter(aqi_order_ul,title);
+		});
+	};
+
+	function insertAfter(newElement,targetElement){
+		var parent = targetElement.parentNode;
+		if (targetElement == parent.lastChild) {
+			parent.append(newElement);
+		}else{
+			parent.insertBefore(newElement,targetElement.nextSibling);
+		}
+	}
+
 	
 	/*----------------------------完---------------—---------------*/
 
