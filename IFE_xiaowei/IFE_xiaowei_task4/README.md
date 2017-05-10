@@ -1,6 +1,8 @@
 ## 任务四：定位和居中问题
 【平均用时 1.1 天】
-[【任务地址】](http://ife.baidu.com/course/detail/id/95) [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task4/IFE_xiaowei_task4.html)
+[【百度地址】](http://ife.baidu.com/course/detail/id/95)
+[【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task4)
+[【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task4/IFE_xiaowei_task4.html)
 
 ### 任务目标
 1. 实践HTML/CSS布局方式

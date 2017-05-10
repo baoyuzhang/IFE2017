@@ -1,7 +1,7 @@
 ## 任务八：响应式网格（栅格化）布局
 【平均用时 1.2 天】
 [【百度地址】](http://ife.baidu.com/course/detail/id/104)
-[【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task8)  
+[【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task8)
 [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task8/IFE_xiaowei_task8.html)
 
 
