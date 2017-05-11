@@ -55,7 +55,7 @@ var aqiData = [
 		var title_text = document.createTextNode("污染城市列表（已排序）");
 		title.appendChild(title_text);
 		insertAfter(title,button_order);
-		// 二维数组排序
+		// 二维数组排序(降序)
 		aqiData.sort(function(x,y){
 			return y[1]-x[1];
 		});
