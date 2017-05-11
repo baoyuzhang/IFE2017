@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务四：基础JavaScript练习（一）</title>
+	<style type="text/css">
+		#left-out{
+			margin-left: 20px;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			display: inline-block;
+			background-color: red;
+			color: white;
+			height: 30px;
+			line-height: 30px;
+			padding: 0 5px;
+			margin: 3px 3px;
+            cursor:pointer;
+		}
+
+	</style>
+</head>
+<body>
+		<input type="text" name="input" value="">
+		<button id="left-in">左侧入</button>
+		<button id="right-in">右侧入</button>
+		<button id="left-out">左侧出</button>
+		<button id="right-out">右侧出</button>
+	<ul id="queue">		
+	</ul>
+	<script type="text/javascript">
+		var queue = document.getElementById('queue');
+		var left_in = document.getElementById('left-in');
+		var right_in = document.getElementById('right-in');
+		var left_out = document.getElementById('left-out');
+		var right_out = document.getElementById('right-out');
+
+		// 入队
+		function enqueue(side){
+			var input = document.getElementsByTagName('input')[0];
+			var input_value = input.value;
+			if (!input_value || isNaN(input_value)) {
+				alert('请输入一个数字');
+				input.value="";
+				input.focus();
+			}else{
+				var li = document.createElement('li');
+				li.innerHTML = input_value;
+				if(side==="left"){
+					queue.insertBefore(li,queue.firstChild);
+				}else if(side==="right"){
+					queue.appendChild(li);
+				}
+				input.value="";
+				input.focus();
+			}
+		}
+
+		// 出队
+		function dequeue(node,side){
+			if(side=="left"){
+				alert("您将删除数字"+queue.firstChild.innerHTML+"!");
+				queue.removeChild(queue.firstChild);
+			}else if(side=="right"){
+				alert("您将删除数字"+queue.lastChild.innerHTML+"!");
+				queue.removeChild(queue.lastChild);
+			}else{
+				// queue.removeChild(node);				
+				// alert("您将删除数字"+node.innerHTML+"!");
+                alert("您将删除数字" +queue.removeChild(node).innerHTML +"!"); // 更好的写法！
+			}
+		}
+
+		left_in.onclick = function(event){enqueue("left");};
+		right_in.onclick = function(event){enqueue("right");};
+		left_out.onclick = function(event){dequeue(0,"left");};
+		right_out.onclick = function(event){dequeue(0,"right");};
+		queue.onclick = function(event){dequeue(event.target);};  // 事件冒泡，事件委托
+
+	</script>
+</body>
+</html>
