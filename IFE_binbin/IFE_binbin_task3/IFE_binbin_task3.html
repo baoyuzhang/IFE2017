@@ -6,21 +6,21 @@
 </head>
 <body>
 	<ul id="source">
-	    <li>北京空气质量：<b>90</b></li>
-	    <li>上海空气质量：<b>70</b></li>
-	    <li>天津空气质量：<b>80</b></li>
-	    <li>广州空气质量：<b>50</b></li>
-	    <li>深圳空气质量：<b>40</b></li>
-	    <li>福州空气质量：<b>32</b></li>
-	    <li>成都空气质量：<b>90</b></li>
+		<li>北京空气质量：<b>90</b></li>
+		<li>上海空气质量：<b>70</b></li>
+		<li>天津空气质量：<b>80</b></li>
+		<li>广州空气质量：<b>50</b></li>
+		<li>深圳空气质量：<b>40</b></li>
+		<li>福州空气质量：<b>32</b></li>
+		<li>成都空气质量：<b>90</b></li>
 	  </ul>
 
 	  <ul id="resort">
-	    <!-- 
-	    <li>第一名：北京空气质量：<b>90</b></li>
-	    <li>第二名：北京空气质量：<b>90</b></li>
-	    <li>第三名：北京空气质量：<b>90</b></li>
-	     -->
+		<!-- 
+		<li>第一名：北京空气质量：<b>90</b></li>
+		<li>第二名：北京空气质量：<b>90</b></li>
+		<li>第三名：北京空气质量：<b>90</b></li>
+		 -->
 
 	  </ul>
 
@@ -34,17 +34,36 @@
 	 * 返回一个数组，格式见函数中示例
 	 */
 	function getData() {
-	  /*
-	  coding here
-	  */
+		/*
+		data = [
+		  ["北京", 90],
+		  ["北京", 90]
+		  ……
+		]
+		*/
+		var source = document.getElementById('source');
+		var source_li = source.childNodes;
+	// chrome浏览器会将空格视为text节点，所以处理子节点之前应删除空格文本节点
+		//如果是文本节点，并且值为空，则删除该节点  
+		for (var i = 0; i < source_li.length; i++) { 
+			if (source_li[i].nodeType == 3 && /\s/.test(source_li[i].nodeValue)) {
+				source_li[i].parentNode.removeChild(source_li[i]);
+			}
+		}
 
-	  /*
-	  data = [
-	    ["北京", 90],
-	    ["北京", 90]
-	    ……
-	  ]
-	  */
+		var data = new Array();
+		for (var i = 0; i < source_li.length; i++) {
+			var city_num = new Array();
+			// 取出城市名city
+			var source_city = source_li[i].childNodes[0];
+			var city = source_city.nodeValue.slice(0, 2);
+			city_num.push(city);
+			// 取出污染指数num
+			var source_num = source_li[i].childNodes[1].childNodes[0];
+			var num = parseInt(source_num.nodeValue);
+			city_num.push(num);
+			data.push(city_num);
+		}
 
 	  return data;
 
@@ -56,7 +75,10 @@
 	 * 返回一个排序后的数组
 	 */
 	function sortAqiData(data) {
-
+		data.sort(function(x,y){
+			return x[1]-y[1];
+		});
+		return data;
 	}
 
 	/**
@@ -65,18 +87,36 @@
 	 * 格式见ul中的注释的部分
 	 */
 	function render(data) {
-
+		console.log(data);
+		var resort_ul = document.getElementById('resort');
+		data.forEach(function(item,index,array){
+			var order_city = item.slice(0,1);
+			var order_city_num = item.slice(1,2);
+			var resort_li = document.createElement("li");
+			var resort_li_text = document.createTextNode("第"+(index+1)+"名："+order_city+"空气质量：");
+			resort_li.appendChild(resort_li_text);
+			var resort_b = document.createElement("b");
+			resort_b.appendChild(document.createTextNode(order_city_num));
+			resort_li.appendChild(resort_b);
+			resort_ul.appendChild(resort_li);
+		});
 	}
 
 	function btnHandle() {
-	  var aqiData = getData();
-	  aqiData = sortAqiData(aqiData);
-	  render(aqiData);
+		var aqiData = getData();
+		console.log("aqiData:"+aqiData);
+		aqiData = sortAqiData(aqiData);
+		console.log(aqiData);
+		render(aqiData);
 	}
 
 	function init() {
 
-	  // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+		// 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+		var sort_btn = document.getElementById('sort-btn');
+		sort_btn.onclick = function(event){
+			return btnHandle();
+		};
 
 	}
 
