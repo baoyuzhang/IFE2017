@@ -21,3 +21,22 @@
 - 其中的数据以及60的判断逻辑可以自行设定
 - 建议不使用任何第三方库、框架
 - 示例代码仅为示例，可以直接使用，也可以完全自己重写
+
+### 任务总结
+1. DOM方法中只有insertBefore()，没有insertAfter()，需自己编写
+```
+function insertAfter(newElement,targetElement){
+		var parent = targetElement.parentNode;
+		if (targetElement == parent.lastChild) {
+			parent.append(newElement);
+		}else{
+			parent.insertBefore(newElement,targetElement.nextSibling);
+		}
+}
+```
+
+2. 用到的数组操作:
+
+  - 操作方法：slice()
+  - 重排序方法：sort()
+  - 迭代方法：forEach()/filter()

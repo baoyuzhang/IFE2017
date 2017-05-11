@@ -21,3 +21,31 @@
 - 代码中含有必要的注释
 - 建议不使用任何第三方库、框架
 - 示例代码仅为示例，可以直接使用，也可以完全自己重写
+
+### 任务总结
+1. chrome浏览器会将空格视为text节点，所以处理ul.childNodes子节点之前应删除空格文本节点
+```
+for (var i = 0; i < node.length; i++) {
+       if (node[i].nodeType == 3 && /\s/.test(node[i].nodeValue)) {
+              node[i].parentNode.removeChild(node[i]);
+       }
+}
+```
+
+2. DOM属性element.childNodes，返回包含该节点的所有子节点对象（可看为数组，但不是数组），不能使用数组的迭代方法，只能使用方括号语法+for循环遍历所有子节点
+
+3. 文本节点是字符串，但字符串不是文本节点，需document.createTextNode('字符串')
+
+4. 类型转换方法
+
+  - String类型 ————> Number类型：parseInt()方法
+  - Number类型 ————> String类型：toString()
+
+5. 用到的数组操作:
+  - 创建：new Array()
+  - 读写：栈方法push()
+  - 操作方法：slice()
+  - 重排序方法：sort()
+  - 迭代方法：forEach()
+
+6. 尽量将功能封装成函数实现
