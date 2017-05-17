@@ -92,3 +92,10 @@
 [【百度地址】](http://ife.baidu.com/course/detail/id/103)
 [【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_binbin/IFE_binbin_task4)
 [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_binbin/IFE_binbin_task4/IFE_binbin_task4.html)
+
+任务五：基础JavaScript练习（二）
+
+【平均用时 1.0 天】
+[【百度地址】](http://ife.baidu.com/course/detail/id/105)
+[【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_binbin/IFE_binbin_task5)
+[【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_binbin/IFE_binbin_task5/IFE_binbin_task5.html)

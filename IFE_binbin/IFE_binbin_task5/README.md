@@ -1,5 +1,5 @@
 ## 任务五：基础JavaScript练习（二）
-【平均用时 1.4 天】
+【平均用时 1.0 天】
 [【百度地址】](http://ife.baidu.com/course/detail/id/105)
 [【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_binbin/IFE_binbin_task5)
 [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_binbin/IFE_binbin_task5/IFE_binbin_task5.html)
@@ -32,6 +32,31 @@
 - [15种排序算法可视化展示](http://v.youku.com/v_show/id_XNjIwNTEzMTA0.html?from=y1.2-1-176.3.3-2.1-1-1-2-0)
 
 ### 待解决
-- [ ]
+
+- 基本功能
+  - [x] 限制输入的数字在10-100
+  - [x] 队列展现方式：用高度表示数字大小
+  - [x] 入队出队数列变换时，记录未排序数列
+  - [ ] 队列元素数量最多限制为60个，当超过60个时，添加元素时alert出提示
+  - [ ] 排序时，显示"正在排序中"
+  - [ ] 页面优化 [【配色】](http://smallstarz.com/baidutask-2017/binbinxueyuan/task5/task_1_5_1.html)  [【数值大小与颜色映射】](http://htmlpreview.github.io/?https://github.com/dirkmu404/baudu/blob/master/stage%202/task5/task5.html) [【入队动画】](https://ivylian.github.io/js_stepbystep/js05.html)
+
+- 排序：
+  - [x] 冒泡排序
+  - [ ] 插入排序
+    - [ ] 希尔排序
+  - [ ] 选择排序
+  - [ ] 快速排序
+  - [ ] 归并排序
+  - [ ] 生成随机数
+
+- 可视化：
+  - [x] 冒泡排序
+  - [ ] 插入排序
+    - [ ] 希尔排序
+  - [ ] 选择排序
+  - [ ] 快速排序
+  - [ ] 归并排序
+
 
 ### 任务总结
