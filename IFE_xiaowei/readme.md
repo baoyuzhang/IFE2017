@@ -69,3 +69,10 @@
 [【百度地址】](http://ife.baidu.com/course/detail/id/113)
 [【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task10)
 [【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task10/IFE_xiaowei_task10.html)
+
+### 任务十一：移动Web页面布局实践
+
+【平均用时 1.5 天】
+[【百度地址】](http://ife.baidu.com/course/detail/id/116)
+[【我的代码】](https://github.com/baoyuzhang/IFE2017/tree/master/IFE_xiaowei/IFE_xiaowei_task11)
+[【效果预览】](https://baoyuzhang.github.io/IFE2017/IFE_xiaowei/IFE_xiaowei_task11/IFE_xiaowei_task11.html)
