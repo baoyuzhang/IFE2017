@@ -25,4 +25,4 @@
 - [MDN flex属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)
 
 ## 课程优秀学习笔记
-- [Flex入门](http://ife.baidu.com/note/detail/id/952)
+- [Flex入门](http://ife.baidu.com/note/detail/id/952)：Flex container和Flex item属性分别介绍，思路更清晰
