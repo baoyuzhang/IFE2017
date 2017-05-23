@@ -16,11 +16,12 @@ right_out.onclick = function(event){dequeue(0,"right");};
 queue.onclick = function(event){dequeue(event.target);};  // 事件冒泡，事件委托
 
 // 记录未排序数列
-var initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
-var initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
-// var initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
-var initState = initArrayList.array().concat();  // 初始ArrayList转为Array
-console.log(initState);
+var initState = rememberInitArray(queue);
+// var initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
+// var initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
+// // var initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
+// var initState = initArrayList.array().concat();  // 初始ArrayList转为Array
+// console.log(initState);
 
 var stateSort = new Array();  // 保留每一次的排序状态，用于可视化
 
@@ -36,6 +37,15 @@ bubble_sort.onclick = function(event){sortAndVisualization("冒泡排序",queue,
 modified_bubble_sort.onclick = function(event){sortAndVisualization("改进冒泡",queue,stateSort);};
 insertion_sort.onclick = function(event){sortAndVisualization("插入排序",queue,stateSort);};
 
+// 记录未排序数列
+function rememberInitArray(ul){
+    var initQueuelist = queueDeleteTextNode(ul.childNodes);  // 初始ul>li的nodelist
+    var initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
+    // var initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
+    var initState = initArrayList.array().concat();  // 初始ArrayList转为Array
+    console.log(initState);
+    return initState;
+}
 // 创建可视化的li
 function createVisualizationItem(itemValue){
     var li = document.createElement('li');
@@ -236,11 +246,12 @@ function enqueue(side){
         input.focus();
 
         // 记录未排序数列
-        initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
-        initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
-        // initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
-        initState = initArrayList.array().concat();  // 初始ArrayList转为Array
-        console.log(initState);
+        initState = rememberInitArray(queue);
+        // initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
+        // initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
+        // // initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
+        // initState = initArrayList.array().concat();  // 初始ArrayList转为Array
+        // console.log(initState);
     }
 }
 
@@ -259,10 +270,11 @@ function dequeue(node,side){
     }
         
     // 记录未排序数列
-    initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
-    initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
-    // initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
-    initState = initArrayList.array().concat();  // 初始ArrayList转为Array
-    console.log(initState);
+    initState = rememberInitArray(queue);
+    // initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
+    // initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
+    // // initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
+    // initState = initArrayList.array().concat();  // 初始ArrayList转为Array
+    // console.log(initState);
 }
 
