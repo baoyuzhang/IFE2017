@@ -18,7 +18,6 @@ queue.onclick = function(event){dequeue(event.target);};  // 事件冒泡，事�
 // 记录未排序数列
 var initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
 var initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
-// printArray(initArrayList);
 // var initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
 var initState = initArrayList.array().concat();  // 初始ArrayList转为Array
 console.log(initState);
@@ -36,30 +35,29 @@ sort_init.onclick = function(event){
         queue.appendChild(li);
     }
 };
-bubble_sort.onclick = function(event){
-    console.log("冒泡排序");
-    var sortQueuelist = queueDeleteTextNode(queue.childNodes);  // 待排序ul>li的nodelist
+bubble_sort.onclick = function(event){sortAndVisualization("冒泡排序",queue,stateSort);};
+modified_bubble_sort.onclick = function(event){sortAndVisualization("改进冒泡",queue,stateSort);};
+insertion_sort.onclick = function(event){sortAndVisualization("插入排序",queue,stateSort);};
+
+// 排序及其可视化
+function sortAndVisualization(sortDescription,ul,stateSort){
+    console.log(sortDescription);
+    var sortQueuelist = queueDeleteTextNode(ul.childNodes);  // 待排序ul>li的nodelist
     var sortArrayList = createNonSortedArray(sortQueuelist);  // 待排序nodelist转为ArrayList
-    sortArrayList.bubbleSort(stateSort);
+    switch (sortDescription){
+        case "冒泡排序":
+            sortArrayList.bubbleSort(stateSort);
+            break;
+        case "改进冒泡":
+            sortArrayList.modifiedBubbleSort(stateSort);
+            break;
+        case "插入排序":
+            sortArrayList.insertionSort(stateSort);
+            break;
+        default:
+            alert("此排序算法不存在！");
+    }
     visualization(stateSort);  // 清空了stateSort
-};
-modified_bubble_sort.onclick = function(event){
-    console.log("改进冒泡");
-    var sortQueuelist = queueDeleteTextNode(queue.childNodes);  // 待排序ul>li的nodelist
-    var sortArrayList = createNonSortedArray(sortQueuelist);  // 待排序nodelist转为ArrayList
-    sortArrayList.modifiedBubbleSort(stateSort);
-    visualization(stateSort);  // 清空了stateSort
-};
-insertion_sort.onclick = function(event){
-    console.log("插入排序");
-    var sortQueuelist = queueDeleteTextNode(queue.childNodes);  // 待排序ul>li的nodelist
-    var sortArrayList = createNonSortedArray(sortQueuelist);  // 待排序nodelist转为ArrayList
-    sortArrayList.insertionSort(stateSort);
-    visualization(stateSort);  // 清空了stateSort
-};
-// 打印nodelist
-function printArray(arraylist){
-    console.log(arraylist.toString());
 }
 
 // 删除nodelist空文本节点
@@ -158,13 +156,7 @@ function ArrayList(){
                     isswap = 1;  // 交换置1
                     console.log(array);
                 }
-                // var state = JSON.parse(JSON.stringify(array));  // array为引用类型，这样才能保留住当前值
-                var state = array.concat();  // array为引用类型，这样才能保留住当前值
-                // console.log(state instanceof Array);  //true
-                state.push(j+1);  // 保存当前比较的数的索引
-                state.push(isswap);  // 保存是否交换
-                stateSort.push(state);
-                // console.log(stateSort); 
+                saveState(array,j+1,isswap,stateSort);
             }
         }
     };
@@ -183,13 +175,7 @@ function ArrayList(){
                     isswap = 1;  // 交换置1
                     console.log(array);
                 }
-                // var state = JSON.parse(JSON.stringify(array));  // array为引用类型，这样才能保留住当前值
-                var state = array.concat();  // array为引用类型，这样才能保留住当前值
-                // console.log(state instanceof Array);  //true
-                state.push(j+1);  // 保存当前比较的数的索引
-                state.push(isswap);  // 保存是否交换
-                stateSort.push(state);
-                // console.log(stateSort); 
+                saveState(array,j+1,isswap,stateSort);
             }
         }
     };
@@ -197,7 +183,6 @@ function ArrayList(){
     this.insertionSort = function(stateSort){
         var length = array.length,
             j,temp;
-        var state = [];
         var isswap = 1;
 
         console.log('--- ');
@@ -212,24 +197,13 @@ function ArrayList(){
                 j--;
 
                 console.log(array);
-                state = array.concat();
-                state.push(j);  // 保存当前比较的数的索引
-                state.push(isswap);  // 保存是否交换
-                stateSort.push(state);
-
+                saveState(array,j,isswap,stateSort);
             }
             array[j] = temp;
 
-            state = array.concat();
-            state.push(j);  // 保存当前比较的数的索引
-            state.push(isswap);  // 保存是否交换
-            stateSort.push(state);
+            saveState(array,j,isswap,stateSort);
         }
-        state = array.concat();
-        state.push(j);  // 保存当前比较的数的索引
-        state.push(0);  // 保存是否交换
-        stateSort.push(state);
-
+        saveState(array,j,0,stateSort);
     };
 }
 
