@@ -17,12 +17,6 @@ queue.onclick = function(event){dequeue(event.target);};  // 事件冒泡，事�
 
 // 记录未排序数列
 var initState = rememberInitArray(queue);
-// var initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
-// var initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
-// // var initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
-// var initState = initArrayList.array().concat();  // 初始ArrayList转为Array
-// console.log(initState);
-
 var stateSort = new Array();  // 保留每一次的排序状态，用于可视化
 
 sort_init.onclick = function(event){
@@ -247,11 +241,6 @@ function enqueue(side){
 
         // 记录未排序数列
         initState = rememberInitArray(queue);
-        // initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
-        // initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
-        // // initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
-        // initState = initArrayList.array().concat();  // 初始ArrayList转为Array
-        // console.log(initState);
     }
 }
 
@@ -271,10 +260,5 @@ function dequeue(node,side){
         
     // 记录未排序数列
     initState = rememberInitArray(queue);
-    // initQueuelist = queueDeleteTextNode(queue.childNodes);  // 初始ul>li的nodelist
-    // initArrayList = createNonSortedArray(initQueuelist);  // 初始nodelist转为ArrayList
-    // // initState = JSON.parse(JSON.stringify(initArrayList.array()));  // 初始ArrayList转为Array
-    // initState = initArrayList.array().concat();  // 初始ArrayList转为Array
-    // console.log(initState);
 }
 
