@@ -28,16 +28,22 @@ sort_init.onclick = function(event){
     console.log(initState);
     queue.innerHTML = "";
     for (var i = 0; i < initState.length; i++) {
-        var li = document.createElement('li');
-        li.innerHTML = initState[i];
-        li_height = initState[i]/100*200;
-        li.style.height = li_height+"px";
+        var li = createVisualizationItem(initState[i]);
         queue.appendChild(li);
     }
 };
 bubble_sort.onclick = function(event){sortAndVisualization("冒泡排序",queue,stateSort);};
 modified_bubble_sort.onclick = function(event){sortAndVisualization("改进冒泡",queue,stateSort);};
 insertion_sort.onclick = function(event){sortAndVisualization("插入排序",queue,stateSort);};
+
+// 创建可视化的li
+function createVisualizationItem(itemValue){
+    var li = document.createElement('li');
+    li.innerHTML = itemValue;
+    li_height = itemValue/100*200;
+    li.style.height = li_height+"px";
+    return li;
+}
 
 // 排序及其可视化
 function sortAndVisualization(sortDescription,ul,stateSort){
@@ -90,10 +96,7 @@ function visualization(stateSort){
             var state = stateSort.shift();
             console.log(state);
             for (var i = 0; i < state.length-2; i++) {
-                var li = document.createElement('li');
-                li.innerHTML = state[i];
-                li_height = state[i]/100*200;
-                li.style.height = li_height+"px";
+                var li = createVisualizationItem(state[i]);
                 // 若i是当前比较的数，且发生了交换，则改变颜色
                 if ( (i == state[state.length-2]) && state[state.length-1] ) {
                     li.style.backgroundColor = "#3DA3EF";  
@@ -183,7 +186,6 @@ function ArrayList(){
     this.insertionSort = function(stateSort){
         var length = array.length,
             j,temp;
-        var isswap = 1;
 
         console.log('--- ');
         for (var i=1; i<length; i++){
@@ -197,11 +199,11 @@ function ArrayList(){
                 j--;
 
                 console.log(array);
-                saveState(array,j,isswap,stateSort);
+                saveState(array,j,1,stateSort);
             }
             array[j] = temp;
 
-            saveState(array,j,isswap,stateSort);
+            saveState(array,j,1,stateSort);
         }
         saveState(array,j,0,stateSort);
     };
@@ -224,10 +226,7 @@ function enqueue(side){
         input.value="";
         input.focus();
     }else{
-        var li = document.createElement('li');
-        li.innerHTML = input_value;
-        li_height = input_value/100*200;
-        li.style.height = li_height+"px";
+        var li = createVisualizationItem(input_value);
         if(side==="left"){
             queue.insertBefore(li,queue.firstChild);
         }else if(side==="right"){
